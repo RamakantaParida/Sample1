@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Example</title>
+    <style>
+        /* Basic button styles */
+        .button {
+            display: block;
+            height: 40px;
+            width: 120px;
+            background-color: #3498db;
+            border: none;
+            color: #ffffff;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        /* Hover effect */
+        .button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <button class="button" onclick="window.open('WIFI:S:Weather Tracker;T:WPA;P:12345678;H:false;')">Hotspot connect</button>
+    <button class="button" onclick="window.open('http://wifi.login')">Configure</button>
+</body>
+</html>
