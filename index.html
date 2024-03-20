@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Button Example with QR Scanner</title>
+    <title>Button Example</title>
     <style>
         /* Basic button styles */
         .button {
@@ -26,32 +26,7 @@
     </style>
 </head>
 <body>
-    <!-- Button for QR scanning -->
-    <button class="button" onclick="scanQRCode()">Scan QR Code</button>
-
-    <!-- Placeholder for storing scanned QR code result -->
-    <input type="hidden" id="qrResult">
-
-    <!-- JavaScript to handle QR scanning -->
-    <script>
-        function scanQRCode() {
-            // Simulating QR code scanning (replace with actual QR scanner logic)
-            const scannedResult = "http://example.com"; // Replace with the actual scanned result
-
-            // Store the scanned result in the hidden input field
-            document.getElementById("qrResult").value = scannedResult;
-
-            // Execute the link associated with the button
-            executeLink();
-        }
-
-        function executeLink() {
-            // Get the stored QR result
-            const qrResult = document.getElementById("qrResult").value;
-
-            // Open the link (replace with your actual logic)
-            window.open(qrResult);
-        }
-    </script>
+    <button class="button" onclick="window.open('wifi://WPA;S=Weather%20Tracker;P=12345678;')">Hotspot connect</button>
+    <button class="button" onclick="window.open('http://wifi.login')">Configure</button>
 </body>
 </html>
