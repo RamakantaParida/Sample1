@@ -3,34 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connect to Wi-Fi</title>
+    <title>Button Example</title>
+    <style>
+        /* Basic button styles */
+        .button {
+            display: block;
+            height: 40px;
+            width: 120px;
+            background-color: #3498db;
+            border: none;
+            color: #ffffff;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        /* Hover effect */
+        .button:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
 <body>
-    <button id="connectButton">Connect to Wi-Fi</button>
-
-    <script>
-        const connectButton = document.getElementById('connectButton');
-
-        connectButton.addEventListener('click', async () => {
-            try {
-                // Replace 'YourNetworkName' and 'YourNetworkPassword' with actual values
-                await connectToWiFi('Weather Tracker', '12345678');
-                alert('Connected to Wi-Fi successfully!');
-            } catch (error) {
-                console.error('Error connecting to Wi-Fi:', error.message);
-            }
-        });
-
-        async function connectToWiFi(networkName, password) {
-            // Use platform-specific APIs or libraries to connect to Wi-Fi
-            // For example, on a web browser, you can't directly connect to Wi-Fi using JavaScript.
-            // You'd need to use native APIs (like Android/iOS) or Electron (for desktop apps).
-            // This example is simplified for demonstration purposes.
-            console.log(`Connecting to ${networkName}...`);
-            // Simulate a successful connection (replace with actual logic)
-            await new Promise((resolve) => setTimeout(resolve, 2000));
-            console.log(`Connected to ${networkName}!`);
-        }
-    </script>
+    <button class="button" onclick="window.open('https://www.google.com/url?sa=t&rct=j&source=webhp&url=https://search.app.goo.gl/%3Fofl%3Dhttps%253A%252F%252Flens.google%26al%3Dgoogleapp%253A%252F%252Flens%253Flens_data%253DKAw%26apn%3Dcom.google.android.googlequicksearchbox%26amv%3D301204913%26isi%3D284815942%26ius%3Dgoogleapp%26ibi%3Dcom.google.GoogleMobile%26link%3Dhttps%253A%252F%252Fgoo.gl%252Fiosgoogleapp%252Fdefault%253Furl%253Dgoogleapp%25253A%25252F%25252Flens%25253Fmin-version%25253D180%252526lens_data%25253DKAw%26ifl%3Dhttps%253A%252F%252Fapps.apple.com%252Fus%252Fapp%252Fgoogle%252Fid284815942%253Fppid%253D1ac8cc35-d99c-4a1d-b909-321c8968cc74%2526pt%253D9008%2526mt%253D8%2526ct%253D4815459-oo-lens-isb-bar-lens-cam%2526UTM_campaign%253Dgoogle_search_mweb%26efr%3D1%26ct%3D4815459-oo-lens-isb-bar-lens-cam%26utm_campaign%3D4815459-oo-lens-isb-bar-lens-cam%26utm_source%3Dgoogle_search_mweb%26utm_medium%3Downed%26pt%3D9008%26mt%3D8&ved=0ahUKEwjxgtD4nIKFAxXeklYBHRhmBe0QhqEICBI&bl=sZk2&opi=89978449&usg=AOvVaw3lTdGuHCgQSsAbOkHGwVV8')">Hotspot connect</button>
+    <button class="button" onclick="window.open('http://wifi.login')">Configure</button>
 </body>
 </html>
